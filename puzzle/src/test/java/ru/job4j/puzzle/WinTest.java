@@ -55,4 +55,16 @@ public class WinTest {
         };
         assertThat(Win.check(board), is(false));
     }
+
+    @Test
+    public void whenRandomIsFalse() {
+        int[][] board = {
+                {0, 0, 1, 0, 0},
+                {0, 0, 0, 1, 0},
+                {0, 1, 0, 0, 0},
+                {0, 0, 0, 0, 1},
+                {0, 1, 0, 0, 0},
+        };
+        assertThat(Win.check(board), is(false));
+    }
 }
